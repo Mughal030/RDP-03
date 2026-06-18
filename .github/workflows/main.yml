@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Restore Previous Session Data
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         continue-on-error: true
         with:
           name: rdp-persistent-data
@@ -174,7 +174,7 @@ jobs:
 
       - name: Save Persistent Data to Artifacts
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rdp-persistent-data
           path: C:\rdp-storage
